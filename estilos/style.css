@@ -2,6 +2,11 @@
 
 /*
     Paleta de Cores
+    cor 1- lilas: #6129BB
+    cor 2 - roxo: #5A3791
+    cor 3 - lilas fraco: #5F0BE6
+    cor 4 - roxo escuro: #4A3866
+    cor 5 - roxo preto: #2F2D33;
 
 */
 
@@ -13,8 +18,11 @@
 }
 
 :root{
-    --cor1: rgb(75, 199, 29);
-    --cor2: purple;
+    --cor1: #6129BB;
+    --cor2: #5A3791;
+    --cor3: #5F0BE6;
+    --cor4: #4A3866;
+    --cor5: #2F2D33;
 }
 
 body, html{
@@ -35,7 +43,7 @@ main{
     left: 50%;
     transform: translate(-50%, -50%);
 
-    background-color: var(--cor1);
+    background-color: var(--cor2);
     width: 250px;
     height: 515px;
     border-radius: 15px;
@@ -58,13 +66,12 @@ section#login > div#imagem{
 section#login > div#form{
     display: block;
     padding: 10px;
-
-
 }
 
 div#form > h1{
     text-align: center;
     margin-bottom: 10px;
+    color: white;
 }
 
 div#form > p{
@@ -78,10 +85,50 @@ form > div.campo{
     border-radius: 20px;
     display: block;
     margin: 10px 0px;
+    border: 1px solid var(--cor5);
+    position: relative;
+    overflow: hidden;
 }
 
 form label{
     display: none;
+}
+
+div.campo > i{
+    color: white;
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px 0 0 20px;
+}
+
+div.campo > input{
+  background-color: var(--cor1); 
+    font-size: 1em;
+    position: absolute;
+    left: 50px; 
+    top: 0;
+    width: calc(100% - 50px);
+    height: 100%;
+    border: 0px;
+    border-radius: 20px;
+    
+    padding: 0 10px;
+}
+
+div.campo > input::placeholder {
+    color: white; 
+    opacity: 1;
 }
 
 form input[type=submit]{
@@ -91,14 +138,14 @@ form input[type=submit]{
     height: 40px;
     background-color: var(--cor1);
     color: white;
-    border: 1px solid black;
+    border: 1px solid var(--cor5);
     border-radius: 20px;
     margin: 0px;
     margin-bottom: 10px;
 }
 
 form input[type=submit]:hover{
-    background-color: var(--cor2);
+    background-color: var(--cor4);
 }
 
 form a.botao{
@@ -111,11 +158,12 @@ form a.botao{
     margin: 0px;
     background-color: var(--cor1);
     color: var(--cor2);
-    border: 1px solid black;
+    border: 1px solid var(--cor5);
     border-radius: 20px;
     text-decoration: none;
+    color: white;
 }
 
 form a.botao:hover{
-    background-color: var(--cor2);
+    background-color: var(--cor4);
 }
